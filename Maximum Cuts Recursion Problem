@@ -1,0 +1,29 @@
+public class Main
+{
+    
+    public static int maxCuts(int N,int a,int b,int c){
+        
+    //Base Condition
+    
+    if (N==0)return 0;
+    if(N<0)return -1;
+    
+    //logic
+    
+    int resA = maxCuts(N-a, a, b, c);
+    int resB = maxCuts(N-b, a, b, c);
+    int resC = maxCuts(N-c, a, b, c);
+    int result = Math.max(resA,Math.max(resB,resC));
+    if(result == -1)return -1;
+    return result +1;
+
+}
+	public static void main(String[] args) {
+		int N = 13;
+		int a = 5;
+		int b= 2;
+		int c = 3;
+		int ans = maxCuts(N,a,b,c);
+		System.out.println(ans);
+	}
+}
