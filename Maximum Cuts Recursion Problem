@@ -19,11 +19,11 @@ public class Main
 
 }
 	public static void main(String[] args) {
-		int N = 13;
+		int l = 13;
 		int a = 5;
 		int b= 2;
 		int c = 3;
-		int ans = maxCuts(N,a,b,c);
+		int ans = maxCuts(l,a,b,c);
 		System.out.println(ans);
 	}
 }
